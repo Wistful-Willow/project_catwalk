@@ -30,7 +30,7 @@ router.post('/', (err) => {
 
 
 // Updates a review to show it was found helpful.
-router.put('/:review_id/helpful', (err) => {
+router.put('/review_id/helpful', (err) => {
   if (err) {
     res.status(404).send(err)
   } else {
@@ -39,7 +39,7 @@ router.put('/:review_id/helpful', (err) => {
 })
 
 // Updates a review to show it was reported. Note, this action does not delete the review, but the review will not be returned in the above GET request.
-router.put('/:review_id/report', (err) => {
+router.put('/review_id/report', (err) => {
   if (err) {
     res.status(404).send(err)
   } else {

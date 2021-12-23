@@ -16,11 +16,13 @@ app.listen(Port, () => {
   console.log(`listening on port ${Port}`)
 })
 
+const API = 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-sfo/';
+// will need to include a param with key-authorization value-github token
 
-app.use('/cart', cart);
-app.use('/interactions', interactions);
-app.use('/products', products);
-app.use('/qa', qa);
-app.use('/reviews', reviews);
+app.use(`${API}/cart`, cart);
+app.use(`${API}/interactions`, interactions);
+app.use(`${API}/products`, products);
+app.use(`${API}/qa`, qa);
+app.use(`${API}/reviews`, reviews);
 
 

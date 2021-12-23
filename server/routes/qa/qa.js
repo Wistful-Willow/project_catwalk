@@ -11,7 +11,7 @@ router.get('/questions', (err, results) => {
 })
 
 // Returns answers for a given question. This list does not include any reported answers.
-router.get('/questions/:question_id/answers', (err, results) => {
+router.get('/questions/question_id/answers', (err, results) => {
   if (err) {
     res.status(404).send(err)
   } else {
@@ -30,7 +30,7 @@ router.post('/questions', (err) => {
 })
 
 // Adds an answer for the given question
-router.post('/questions/:question_id/answers', (err) => {
+router.post('/questions/question_id/answers', (err) => {
   if (err) {
     res.status(404).send(err)
   } else {
@@ -39,7 +39,7 @@ router.post('/questions/:question_id/answers', (err) => {
 })
 
 // Updates a question to show it was found helpful.
-router.put('/questions/:question_id/helpful', (err) => {
+router.put('/questions/question_id/helpful', (err) => {
   if (err) {
     res.status(404).send(err)
   } else {
@@ -48,7 +48,7 @@ router.put('/questions/:question_id/helpful', (err) => {
 })
 
 // Updates a question to show it was reported. Note, this action does not delete the question, but the question will not be returned in the above GET request.
-router.put('/questions/:question_id/report', (err) => {
+router.put('/questions/question_id/report', (err) => {
   if (err) {
     res.status(404).send(err)
   } else {
